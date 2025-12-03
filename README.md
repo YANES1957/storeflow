@@ -1,62 +1,80 @@
-# StoreFlow PetShop - Microservices
+🟢 #**Starflow - Microserviço de um PetShop** 🐾
+🟢 ##**Descrição do Projeto**
 
-Projeto de microserviços para gerenciamento de um petshop.
+**O Starflow é um sistema de microserviço voltado para gerenciamento de pedidos e serviços de um PetShop.
+O projeto foi desenvolvido para demonstrar a construção de microserviços robustos, escaláveis e bem testados, usando Spring Boot 3.5.8, Java JDK 17, Maven e conteinerização via Rancher Desktop.**
 
-## Microserviços
+##**O microserviço gerencia funcionalidades como:**
 
-- **order-service**: gerenciamento de pedidos
-- **product-service**: cadastro de produtos
-- **customer-service**: cadastro de clientes
+Cadastro e gerenciamento de clientes e pets.
 
-## Tecnologias
+Registro e controle de pedidos de serviços do PetShop.
 
-- Java 17
-- Spring Boot
-- Maven
-- Docker / Kubernetes (Rancher Desktop)
+Comunicação entre microserviços, garantindo integração com outros sistemas.
 
-## Como rodar
+🟢 **Tecnologias Utilizadas**
 
-1. Build: #!/bin/bash
+Java JDK 17
 
-# =========================
-# Configurações iniciais
-# =========================
-GITHUB_USER="YANES1957"
-REPO_NAME="storeflow"
-PROJECT_DIR="/c/Users/Yan/storeflow"
+Maven como gerenciador de dependências
 
-# Criar pasta do projeto se não existir
-mkdir -p /c/Users/Yan/storeflow
-cd /c/Users/Yan/storeflow || exit
+Spring Boot 3.5.8 (Spring Web, Spring Data JPA, Spring Test)
 
-# Inicializar Git se não tiver
-if [ ! -d ".git" ]; then
-    git init
-    git remote add origin https://github.com/YANES1957/storeflow.git
-fi
+Banco de dados H2 (para desenvolvimento e testes)
 
-# Criar README.md básico
-cat > README.md <<EOL
-# StoreFlow PetShop - Microservices
+Rancher Desktop para containerização e execução de microserviços
 
-Projeto de microserviços para gerenciamento de um petshop.
+JUnit 5 para testes unitários
 
-## Microserviços
+Mockito para testes de integração simulando dependências
 
-- **order-service**: gerenciamento de pedidos
-- **product-service**: cadastro de produtos
-- **customer-service**: cadastro de clientes
+QA e testes automatizados garantindo a qualidade do código
 
-## Tecnologias
+Estrutura de Microserviços
 
-- Java 17
-- Spring Boot
-- Maven
-- Docker / Kubernetes (Rancher Desktop)
+PetShop Microservice: Gerencia cadastro de pets, clientes e serviços do PetShop.
 
-## Como rodar
+Starflow Microservice: Gerencia pedidos e integra com o PetShop Microservice, simulando um fluxo completo de pedidos.
 
-1. Build: `mvn clean package`
-2. Build Docker: `docker build -t storeflow/<service>:latest .`
-3. Rodar: `docker run -p <porta>:<porta> storeflow/<service>:latest`
+Cada microserviço roda isoladamente em seu container, permitindo testes independentes e escalabilidade.
+
+🟢##**Como Rodar o Projeto**
+Pré-requisitos
+
+Rancher Desktop instalado
+
+Docker funcionando dentro do Rancher Desktop
+
+JDK 17
+
+Maven
+
+Comandos
+
+🟢**Subir todos os microserviços:**
+
+./mvnw spring-boot:run
+
+ou, se usar containers via Rancher:
+
+docker-compose up -d
+
+🟢 **Pausar o projeto:**
+
+docker-compose pause
+
+Retomar o projeto:
+
+docker-compose unpause
+
+🟢 **Interromper/Parar o projeto:**
+
+docker-compose down
+
+🟢**Testes Automatizados**
+
+**O projeto possui testes para garantir estabilidade e confiabilidade:**
+
+**Testes Unitários: usando JUnit 5, verificando funcionalidades isoladas.**
+
+**Testes de Integração: usando Mockito, garantindo que os microserviços se comuniquem corretamente.** 🚀
