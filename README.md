@@ -38,7 +38,7 @@ Starflow Microservice: Gerencia pedidos e integra com o PetShop Microservice, si
 
 Cada microserviço roda isoladamente em seu container, permitindo testes independentes e escalabilidade.
 
-🟢##**Como Rodar o Projeto**
+🟢**Como Rodar o Projeto**
 Pré-requisitos:
 
 Rancher Desktop instalado
