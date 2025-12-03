@@ -1,4 +1,5 @@
 🟢 **Storeflow - Microserviço de um PetShop** 🐾
+
 🟢 **Descrição do Projeto**
 
 **O Starflow é um sistema de microserviço voltado para gerenciamento de pedidos e serviços de um PetShop.
@@ -38,7 +39,7 @@ Starflow Microservice: Gerencia pedidos e integra com o PetShop Microservice, si
 
 Cada microserviço roda isoladamente em seu container, permitindo testes independentes e escalabilidade.
 
-🟢**Como Rodar o Projeto**
+🟢 **Como Rodar o Projeto**
 Pré-requisitos:
 
 Rancher Desktop instalado
@@ -51,7 +52,7 @@ Maven
 
 Comandos
 
-🟢**Subir todos os microserviços:**
+🟢 **Subir todos os microserviços:**
 
 ./mvnw spring-boot:run
 
@@ -71,7 +72,7 @@ docker-compose unpause
 
 docker-compose down
 
-🟢**Testes Automatizados**
+🟢 **Testes Automatizados**
 
 **O projeto possui testes para garantir estabilidade e confiabilidade:**
 
