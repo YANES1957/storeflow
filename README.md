@@ -1,4 +1,4 @@
-🟢 **Starflow - Microserviço de um PetShop** 🐾
+🟢 **Storeflow - Microserviço de um PetShop** 🐾
 🟢 **Descrição do Projeto**
 
 **O Starflow é um sistema de microserviço voltado para gerenciamento de pedidos e serviços de um PetShop.
